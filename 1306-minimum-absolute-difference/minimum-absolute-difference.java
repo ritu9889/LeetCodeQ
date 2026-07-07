@@ -7,30 +7,26 @@ class Solution {
         int j = i + 1;
         int min = 0;
         int minimum = Integer.MAX_VALUE;
+        List<List<Integer>> result = new ArrayList<>();
         while(j < n){
             min = Math.abs(arr[i] - arr[j]);
-            if(minimum > min){
-                minimum = min;
-            }
-            i++;
-            j++;
+           if(minimum > min){
+            minimum = min;
+            result.clear();
+              List<Integer> ans = new ArrayList<>();
+              ans.add(arr[i]);
+              ans.add(arr[j]);
+              result.add(ans);
+           }
+           else if( minimum == min ){
+             List<Integer> ans1 = new ArrayList<>();
+              ans1.add(arr[i]);
+              ans1.add(arr[j]);
+              result.add(ans1);
+           }
+           i++;
+           j++;
         }
-
-        int k = 0;
-        int r = k + 1;
-        List<List<Integer>> result = new ArrayList<>();
-        while(r < n){
-            min = Math.abs(arr[k] - arr[r]);
-            if(min == minimum){
-                List<Integer> ans = new ArrayList<>();
-                ans.add(arr[k]);
-                ans.add(arr[r]);
-                result.add(ans);
-            }
-            k++;
-            r++;
-        }
-
         return result;
     }
 }
