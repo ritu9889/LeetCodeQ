@@ -11,10 +11,11 @@ class Solution {
             int val = nums[i] + nums[i + 1];
             if(val > nums[j]){
                 perimeter = val + nums[j];
-                if(perimeter > maxPerimeter){
-                    maxPerimeter = perimeter;
-                }
             }
+            if(perimeter > maxPerimeter){
+                maxPerimeter = perimeter;
+            }
+            
             if(j == n - 1 && maxPerimeter < 0){
                 return 0;
             }
