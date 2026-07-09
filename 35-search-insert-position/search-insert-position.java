@@ -15,11 +15,6 @@ class Solution {
             }
         
         }
-        if(nums[mid] > target){
-            return start;
-        }
-        else{
-            return start;
-        }
+       return start;
     }
 }
