@@ -30,9 +30,6 @@ class Solution {
                 }
             }
         }
-        if(start == n - 1){
-            return nums[0];
-        }
         return nums[ans + 1];
     }
 }
