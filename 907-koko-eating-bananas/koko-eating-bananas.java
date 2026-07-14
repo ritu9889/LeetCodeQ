@@ -4,11 +4,12 @@ class Solution {
         int i = 0;
         int val = 0;
         while(i < arr.length){
+            int a = arr[i]/speed;
             if(arr[i] % speed == 0){
-                h = h + (arr[i]/speed);
+                h = h + a;
             }
             else{
-                h = h + (arr[i]/speed + 1);
+                h = h + (a + 1);
             }
             if(h > hours){
                 return false;
