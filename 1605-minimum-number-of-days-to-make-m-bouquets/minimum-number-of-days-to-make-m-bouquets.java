@@ -5,12 +5,12 @@ class Solution {
         for(int i = 0; i < bloomDay.length; i++){
             if(bloomDay[i] <= maxDay){
                 k1++;
-            }
-            else{
+                if(k1 == k){
+                m1++;
                 k1 = 0;
             }
-            if(k1 == k){
-                m1++;
+            }
+            else{
                 k1 = 0;
             }
         }
