@@ -3,20 +3,14 @@ class Solution {
         int day = 1;
         int weight = 0;
         for(int i = 0; i < weights.length; i++){
-            if(weight + weights[i] <= maxWeight){
-                weight += weights[i];
+           if(weight + weights[i] > maxWeight){
+            day++;
+            weight = 0;
+            if(day > days || weights[i] > maxWeight){
+                return false;
             }
-            else{
-                day++;
-                weight = 0;
-
-                if(weights[i] > maxWeight || day > days){
-                    return false;
-                }
-                else{
-                    weight += weights[i];
-                }
-            }
+           }
+           weight += weights[i];
         }
         return true;
     }
