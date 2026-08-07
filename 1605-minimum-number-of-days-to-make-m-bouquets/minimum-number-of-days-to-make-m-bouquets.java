@@ -27,14 +27,12 @@ class Solution {
             return -1;
         }
 
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
-
-        for(int day : bloomDay){
-        min = Math.min(min, day);
-        max = Math.max(max, day);
+        int max = 0;
+        for(int i = 0; i < n; i++){
+            max = Math.max(max,bloomDay[i]);
         }
-        int st = min;
+
+        int st = 1;
         int end = max;
         int ans = 0;
 
