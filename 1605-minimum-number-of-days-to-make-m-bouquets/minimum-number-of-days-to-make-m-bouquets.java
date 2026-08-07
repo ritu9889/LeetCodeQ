@@ -1,7 +1,7 @@
 class Solution {
     static boolean isValidDay(int[] bloomDay, int m, int k, int maxDay){
-        int m1 = 0;
-        int k1 = 0;
+        int m1 = 0; // bouquet count
+        int k1 = 0; // flower count for individual bouquet
         for(int i = 0; i < bloomDay.length; i++){
             if(bloomDay[i] <= maxDay){
                 k1++;
