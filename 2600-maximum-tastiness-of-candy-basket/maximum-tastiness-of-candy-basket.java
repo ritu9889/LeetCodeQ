@@ -6,12 +6,12 @@ class Solution {
             if(Math.abs(price[i] - price[candyPos]) >= taste){
                 countCandy++;
                 candyPos = i;
-                if(countCandy == k){
-                    return true;
-                }
+                // if(countCandy == k){
+                //     return true;
+                // }
             }
         }
-        return false;
+        return countCandy >= k;
     }
     public int maximumTastiness(int[] price, int k) {
         Arrays.sort(price);
