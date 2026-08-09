@@ -3,7 +3,7 @@ class Solution {
         int countCandy = 1;
         int candyPos = 0;
         for(int i = 1; i < price.length; i++){
-            if(Math.abs(price[i] - price[candyPos]) >= taste){
+            if(price[i] - price[candyPos] >= taste){
                 countCandy++;
                 candyPos = i;
                 // if(countCandy == k){
