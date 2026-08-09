@@ -4,15 +4,15 @@ class Solution {
         int countBall = 1;
         int currBallPos = 0;
         for(int i = 1; i < n; i++){
-            if(Math.abs(position[i] - position[currBallPos]) >= minForce){
+            if(position[i] - position[currBallPos] >= minForce){
                 countBall++;
                 currBallPos = i;
             }
-            if(countBall == balls){
-                return true;
-            }
+            // if(countBall == balls){
+            //     return true;
+            // }
         }
-        return false;
+        return countBall >= balls;
     }
     public int maxDistance(int[] position, int m) {
         Arrays.sort(position);
