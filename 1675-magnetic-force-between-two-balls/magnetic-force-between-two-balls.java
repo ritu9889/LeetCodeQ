@@ -7,9 +7,9 @@ class Solution {
             if(Math.abs(position[i] - position[currBallPos]) >= minForce){
                 countBall++;
                 currBallPos = i;
-                if(countBall == balls){
-                    return true;
-                }
+            }
+            if(countBall == balls){
+                return true;
             }
         }
         return false;
