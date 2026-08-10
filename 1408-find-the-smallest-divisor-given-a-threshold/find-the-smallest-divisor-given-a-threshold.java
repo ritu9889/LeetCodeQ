@@ -1,18 +1,20 @@
 class Solution {
     static boolean isValidDivisor(int[] nums, int threshold, int divisor){
-        double sumOfResults = 0;
+        int sumOfResults = 0;
         double r = (double)divisor;
-        for(int num : nums){
-            double Quotient = Math.ceil(num / r);
+        for(int i = 0; i < nums.length; i++){
+            double Quotient = Math.ceil(nums[i] / r);
             sumOfResults += Quotient;
         }
-        return (int)sumOfResults <= threshold;
+        return sumOfResults <= threshold;
     }
     public int smallestDivisor(int[] nums, int threshold) {
         int start = 1;
         int maxi = -1;
-        for(int num : nums){
-            maxi = Math.max(maxi, num);
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > maxi){
+                maxi = nums[i];
+            }
         }
         int end = maxi;
         int ans = 0;
