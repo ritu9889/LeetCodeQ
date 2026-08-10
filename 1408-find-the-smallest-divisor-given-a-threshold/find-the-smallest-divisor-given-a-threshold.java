@@ -5,6 +5,10 @@ class Solution {
         for(int i = 0; i < nums.length; i++){
             int Quotient = nums[i] / divisor;
             if(nums[i] % divisor != 0){
+                //The two steps of finding quotient and deciding whether 
+                //its completely divisible or not 
+                //can be replaced by 1 step ,which is :
+                //(num + divisor - 1)/divisor
                sumOfResults += (Quotient + 1);
             }
             else{
