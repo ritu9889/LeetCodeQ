@@ -1,12 +1,12 @@
 class Solution {
     static boolean isValidDivisor(int[] nums, int threshold, int divisor){
-        int sumOfResults = 0;
+        double sumOfResults = 0;
         double r = (double)divisor;
         for(int i = 0; i < nums.length; i++){
             double Quotient = Math.ceil(nums[i] / r);
             sumOfResults += Quotient;
         }
-        return sumOfResults <= threshold;
+        return (int)sumOfResults <= threshold;
     }
     public int smallestDivisor(int[] nums, int threshold) {
         int start = 1;
