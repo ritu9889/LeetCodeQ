@@ -3,17 +3,10 @@ class Solution {
         double sumOfResults = 0;
         double r = (double)divisor;
         for(int num : nums){
-            double k = (double)num;
-            double a = k / r;
-            double Quotient = Math.ceil(a);
+            double Quotient = Math.ceil(num / r);
             sumOfResults += Quotient;
         }
-        if((int)sumOfResults <= threshold){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return (int)sumOfResults <= threshold;
     }
     public int smallestDivisor(int[] nums, int threshold) {
         int start = 1;
